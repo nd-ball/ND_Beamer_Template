@@ -52,10 +52,14 @@
     urlbordercolor=cyan        % color of external links
 }
 
-
+\usepackage[
+maxnames=2,
+style=numeric-comp,
+backref=true,
+backend=biber]{biblatex}
 % Use \cite, \footcite, \parencite, etc. \supercite, Is only compatible if style
 % is numeric. Styles: numeric, numeric-comp, authoryear, etc.
-%\addbibresource{references.bib}
+\addbibresource{references.bib}
 %\setbeamertemplate{bibliography item}[text] % Use to remove icons from bibliography
 \usepackage{datetime}
 \newdateformat{specialdate}{\THEYEAR-\twodigit{\THEMONTH}-\twodigit{\THEDAY}}
@@ -68,18 +72,18 @@
 % - Use the \inst{?} command only if the authors have different
 %   affiliation.
 %\author{F.~Author\inst{1} \and S.~Another\inst{2}}
-\author{Daniel Howard\inst{1}}
+\author{John Lalor\inst{1}}
 
 % - Use the \inst command only if there are several affiliations.
 % - Keep it simple, no one is interested in your street address.
 \institute[\hspace*{1em} Notre Dame]{
 \inst{1}%
-Department of Applied \& Computational Mathematics \& Statistics\\
-University of Notre Dame du Lac
+ITAO \\
+University of Notre Dame
 \and
 \inst{2}%
-Department of Theoretical Philosophy\\
-University of E}
+Other Department\\
+Other University}
 
 % This is only inserted into the PDF information catalog. Can be left
 % out.
@@ -133,5 +137,5 @@ University of E}
 % You might wish to add the option [pausesections]
 \end{frame}
 
-\input{document}
+%\input{document}
 \end{document}
