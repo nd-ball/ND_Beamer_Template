@@ -1,3 +1,11 @@
 /presentation.pdf
 /presentation.synctex.gz
 /tmp/
+*.aux
+*.log
+*.bcf
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb

@@ -3,6 +3,7 @@
 %% see https://www.github.com/dphow/ND_Beamer_Template
 %% template based on a template by Till Tantau
 %% Adapted to Notre Dame by Daniel Howard
+%% Updated by John Lalor
 
 \documentclass[compress,xcolor=table]{beamer}
 % Keep compress option to save the most space vertical space, especially when
@@ -36,7 +37,7 @@
 \usepackage[scaled=.90]{helvet}
 \usepackage{courier}
 \usepackage[T1]{fontenc}
-\usepackage{pstricks,pst-node,pst-text,pst-3d}
+%\usepackage{pstricks,pst-node,pst-text,pst-3d}
 \usepackage{color,colortbl}
 
 \usepackage{geometry}
@@ -51,14 +52,10 @@
     urlbordercolor=cyan        % color of external links
 }
 
-\usepackage[
-maxnames=2,
-style=numeric-comp,
-backref=true,
-backend=biber]{biblatex}
+
 % Use \cite, \footcite, \parencite, etc. \supercite, Is only compatible if style
 % is numeric. Styles: numeric, numeric-comp, authoryear, etc.
-\addbibresource{references.bib}
+%\addbibresource{references.bib}
 %\setbeamertemplate{bibliography item}[text] % Use to remove icons from bibliography
 \usepackage{datetime}
 \newdateformat{specialdate}{\THEYEAR-\twodigit{\THEMONTH}-\twodigit{\THEDAY}}

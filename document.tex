@@ -46,14 +46,14 @@ so as to allow use of the package {\blue\texttt{pstricks}}.
 create items for the Table of Contents
 
 \alert<1>{The code for a frame is ...}
-\begin{verbatim}
-  \subsection{Basics}
-  \begin{frame}
-    \frametitle{Sample Code}
-          Frame content
-          .
-  \end{frame}
-\end{verbatim}
+%\begin{verbatim}
+%\subsection{Basics}
+%\begin{frame}
+%  \frametitle{Sample Code}
+%        Frame content
+%        .
+%\end{frame}
+%\end{verbatim}
 \end{frame}
 
 \subsection{Color}
@@ -450,98 +450,6 @@ cause the material to be typeset as a ``normal'' article---all frame references 
  
 %---------------------------------------------------------------------- SLIDE -
 \section{Fancy Bits}
-\subsection{pstricks package} 
-\begin{frame}[fragile]
-\frametitle{Diagrams}
-A small diagram with a few lines of \LaTeX.
-\uncover<2->{
-  At the 2nd overlay we can add a link from one to another using
-\blue \rnode{start}{\textsc{PSTricks}}}%
-
-\vspace{0.4cm}
-{\tiny
-\begin{equation*}
-\setlength{\arraycolsep}{1cm}
-\def\tX{\tilde{\tilde{X}}}
-\begin{array}{cc}
-        (X-A,N-A)\rnode{a}{} & \rnode{b}{}(\tX,a)\\[1.5cm]
-        (X,N)\rnode{c}{} & \rnode{d}{}(\tX,N)\\[1.5cm]
-\end{array}
-\psset{nodesep=5pt,arrows=->}
-\visible<2>{\nccurve[linecolor=red,angleA=270,angleB=300]{start}{c}}%
-\ncline[linecolor=blue]{a}{b}\Aput{a}
-\ncline[linecolor=blue]{a}{c}\Bput{r}
-\ncline[linecolor=blue,linestyle=dashed]{c}{d}\Bput{b}
-\ncline[linecolor=blue]{b}{d}\Bput{s}
-\end{equation*}}
-\vspace*{-.5in}\black
-{\small\begin{verbatim}
-  \blue \rnode{START}{\textsc{PSTricks}}
-...
-  \visible<2>{\nccurve%
-      [linecolor=red,angleA=270,angleB=300]{START}{c}}
-\end{verbatim}}
-\end{frame}
-%------------------------------------------------------------------------------
-
-\begin{frame}
-\frametitle{Householder formula}
-
-The Householder formula below lets one compute $f(x_\ast)=0$ for an arbitrary $f$.
-{%\scriptsize
-\begin{equation}\label{Householder}
-x_{k+1}\mapsto \Phi_n(x_k)=x_k+(n-1)
-\frac{\left( \frac{1}{f(x_k)}\right)^{n{\displaystyle-}2}}
-{\bigl(\frac{1}{f(x_k)}\bigr)^{n{\displaystyle-}1}}+
-f(x_k)^{n+1}%
-\alt<1>{\rnode{NA}{\pscirclebox[linecolor=red,linecolor=white]{\psi}}}
-{\rnode{NA}{\pscirclebox[linecolor=red]{\psi}}}
-\end{equation}}
-
-\visible<2->{%
-where $n\geq 2$ and \rnode{NB}{$\psi$} is an arbitrary function.}
-\visible<2->{\nccurve[linecolor=red,angleA=90,angleB=270]{->}{NB}{NA}}
-
-\visible<3>{
-Formula~\eqref{Householder} gives an iteration of order $n$ converging
-towards $x_{\ast}$ such that: $f(x_{\ast})=0$.}
-\end{frame}
-%---------------------------------------------------------------------- SLIDE -
-\begin{frame}
-\frametitle{Some \textsc{pstricks}}
-
-Any practical use for this?
-
-\begin{psclip}{\psellipse[linecolor=red]%
-                (4.9,-1.7)(4,1.6)}
-\begin{center}
-\parbox{9cm}{%
-{\green
-ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--%
-ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--%
-ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--%
-ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--%
-ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--%
-ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS}}
-\end{center}
-\end{psclip}
-\end{frame}
-%---------------------------------------------------------------------- SLIDE -
-\begin{frame}[fragile]
-\frametitle{Some more \textsc{pstricks}}
-
-or this ...
-\begin{center}
-\pstextpath{\psccurve[linestyle=none](.5,0)(3.5,1)(3.5,0)(.5,1)}%
-{\blue ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--ICM}
-\end{center}
-\begin{verbatim}
-\pstextpath{\psccurve[linestyle=none]%
-(.5,0)(3.5,1)(3.5,0)(.5,1)}%
-{\blue ICMS--ICMS--ICMS--ICMS--ICMS--ICMS--%
-ICMS--ICMS--ICMS--ICMS--ICM}
-\end{verbatim}
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Movies}
