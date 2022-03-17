@@ -3,6 +3,21 @@ University of Notre Dame theme.  For math typesetting, it is definitely better t
 
 The easiest way to install this theme is to just dump the *.sty files into the same directory as your tex source.
 
+## Logos
+
+The template expects a directory called "ND_Logos" with the following structure:
+
+```
+ND_Logos
+├── academic_mark
+│   └── PDF
+├── mendoza
+└── monogram
+    └── PDF
+```
+
+The relevant files can be downloaded from the Notre Dame website (authentication required): https://onmessage.nd.edu/university-branding/logos/academic-mark/
+
 A minimal Beamer presentation using this template looks something like the following:
 
 \documentclass{beamer}
