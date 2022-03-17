@@ -7,7 +7,7 @@ The easiest way to install this theme is to just dump the *.sty files into the s
 
 The template expects a directory called "ND_Logos" with the following structure:
 
-```
+```console
 ND_Logos
 ├── academic_mark
 │   └── PDF
